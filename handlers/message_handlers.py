@@ -29,7 +29,7 @@ from supabase_service import (
     set_user_model_preference
 )
 
-LANGUAGE_NAMES = { "en": "English 🇬🇧", "id": "Indonesia 🇮🇩", "ru": "Русский 🇷🇺" }
+LANGUAGE_NAMES = { "en": "English 🇬🇧", "id": "Indonesia 🇮🇩", "ru": "Русский 🇷🇺", "fr": "Français 🇫🇷" }
 
 def get_language_keyboard_builder() -> InlineKeyboardBuilder:
     builder = InlineKeyboardBuilder()
