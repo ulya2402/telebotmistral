@@ -6,14 +6,14 @@ load_dotenv()
 TELEGRAM_BOT_TOKEN = os.getenv("TELEGRAM_BOT_TOKEN")
 MISTRAL_API_KEY = os.getenv("MISTRAL_API_KEY")
 
-DEFAULT_MISTRAL_MODEL = os.getenv("MISTRAL_MODEL", "mistral-large-latest") 
+DEFAULT_MISTRAL_MODEL = os.getenv("MISTRAL_MODEL", "mistral-small-latest") 
 
 AVAILABLE_MISTRAL_MODELS = {
-    "mistral-large-latest": "Mistral Large",
-    "mistral-medium-latest": "Mistral Medium",
     "mistral-small-latest": "Mistral Small",
-    "mistral-saba-latest": "Mistral Saba",
+    "open-mistral-nemo" : "Open Mistral Nemo",
+    "pixtral-12b-2409" : "Pixtral 12B",
     "codestral-latest": "Codestral",
+    "open-codestral-mamba": "Open Codestral Mamba",
 }
 
 if DEFAULT_MISTRAL_MODEL not in AVAILABLE_MISTRAL_MODELS:
@@ -32,7 +32,7 @@ CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 LOCALES_DIR = os.path.join(CURRENT_DIR, "locales")
 
 DEFAULT_LANGUAGE = "en"
-SUPPORTED_LANGUAGES = ["en", "id", "ru"]
+SUPPORTED_LANGUAGES = ["en", "id", "ru", "fr"]
 
 MISTRAL_SYSTEM_PROMPT = os.getenv("MISTRAL_SYSTEM_PROMPT", None) 
 
